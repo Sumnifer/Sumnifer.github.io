@@ -252,7 +252,7 @@ svg circle {
   cursor: pointer;
   position: relative;
   filter: grayscale(0%);
-  background-image: url("../img/button.png");
+  background-image: url("img/button.png");
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
