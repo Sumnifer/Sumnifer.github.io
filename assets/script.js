@@ -9,19 +9,19 @@ class Rock {
         this.goldNuggets += (Math.round(this.multiplicative));
     }
 
-    showPlusPepite() {
+    showMoreNuggets() {
         const nugget = document.createElement("img");
         nugget.src = "assets/img/nugget.png";
         nugget.classList.add("body__clicker_container_text_nugget");
-        const plusPepite = document.createElement("span");
-        plusPepite.classList.add("body__clicker_container_bloc_rock_span")
-        plusPepite.textContent = "+" + Math.round(this.multiplicative);
-        plusPepite.appendChild(nugget);
+        const moreNuggets = document.createElement("span");
+        moreNuggets.classList.add("body__clicker_container_bloc_rock_span")
+        moreNuggets.textContent = "+" + Math.round(this.multiplicative);
+        moreNuggets.appendChild(nugget);
         const container = document.querySelector(".body__clicker_container_bloc_rock");
-        container.appendChild(plusPepite);
+        container.appendChild(moreNuggets);
 
         setTimeout(() => {
-            container.removeChild(plusPepite);
+            container.removeChild(moreNuggets);
         }, 500);
     }
 
@@ -179,7 +179,7 @@ ROCK_ELEMENT.addEventListener("click", function () {
     ROCK.getNuggets();
     ROCK.updateNuggetsCount();
     checkButtonAvailability();
-    ROCK.showPlusPepite();
+    ROCK.showMoreNuggets();
 });
 //=================== Upgrades Declarations =====================//
 
