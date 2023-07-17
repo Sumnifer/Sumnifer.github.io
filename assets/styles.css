@@ -161,7 +161,7 @@ svg circle {
 
 .body {
   font-family: Rye, sans-serif;
-  background-image: url("../img/background.jpg");
+  background-image: url("img/background.jpg");
   background-position: center;
   background-size: cover;
   max-height: 100vh;
