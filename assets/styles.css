@@ -161,7 +161,7 @@ svg circle {
 
 .body {
   font-family: Rye, sans-serif;
-  background-image: url("img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-position: center;
   background-size: cover;
   max-height: 100vh;
@@ -252,7 +252,7 @@ svg circle {
   cursor: pointer;
   position: relative;
   filter: grayscale(0%);
-  background-image: url("img/button.png");
+  background-image: url("../img/button.png");
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,6 +289,11 @@ svg circle {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+@media screen and (max-width: 768px) {
+  .body__clicker_container_cta_container_bloc {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
