@@ -1,49 +1,129 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-      <meta charset="UTF-8">
-      <title>Cookie Clicker !</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="assets/styles.css">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body">
 
-  </head>
-  <body class="body">
-    <header class="body__header">
-      <nav class="body__header_navbar">
-        <menu class="body__header_navbar_menu">
-          <li class="body__header_navbar_menu_items"><a href="#" class="body__header_navbar_menu_items_link"><i class="fa-solid fa-gear"></i> Options</a></li>
-          <li class="body__header_navbar_menu_items"><a href="#" class="body__header_navbar_menu_items_link"><i class="fa-solid fa-chart-simple"></i> Statistiques</a></li>
-          <li class="body__header_navbar_menu_items"><a href="#" class="body__header_navbar_menu_items_link"><i class="fa-solid fa-angles-up"></i> Prestige ! </a></li>
+<header class="body__header">
+
+    <nav>
+        <menu>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
         </menu>
-      </nav>
-    </header>
-    <main class="body__main">
-      <div class="body__main_container">
-        <h2><span class="cookieCount"></span> Cookies ! </h2>
-       <img src="assets/img/cookie.png" alt="" class="body__main_container_cta">
-        <div></div>
-      </div>
-      <div class="body__main_container">
-        <div class="body__main_container_middleItems">test</div>
-        <div class="body__main_container_middleItems">test</div>
-        <div class="body__main_container_middleItems">test</div>
-        <div class="body__main_container_middleItems">test</div>
-      </div>
-      <div class="body__main_container">
-        <div class="body__main_container_amelioration amelioration1">
-          <p>Amélioration 1</p>
-          <p>Cout : <span class="cost1"></span></p>
-          <p>Niveau : <span class="level1"></span></p>
+    </nav>
+</header>
 
+<div id="countdown">
+    <div id="countdown-number"></div>
+    <svg>
+        <circle id="circle" r="18" cx="20" cy="20"></circle>
+    </svg>
+</div>
+<section class="body__clicker">
+
+
+    <div class="body__clicker_container">
+        <div class="nuggetsCounter body__clicker_container_text"></div>
+        <div class="body__clicker_container_bloc">
+            <button id="rock" class="body__clicker_container_bloc_rock"><img src="assets/img/rock.png " alt=""></button>
         </div>
-        <div class="body__main_container_amelioration amelioration2">Amélioration 2</div>
-        <div class="body__main_container_amelioration amelioration3">Amélioration 3</div>
-        <div class="body__main_container_amelioration amelioration4">Amélioration 4</div>
-      </div>
-    </main>
-
-
-  <script src="script.js"></script>
-
-  </body>
+    </div>
+    <div class="body__clicker_container">
+        <div class="woodPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/wood.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level woodPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Wood Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost woodPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="rockPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/stone.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level rockPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Rock Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost rockPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="ironPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/iron.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level ironPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Iron Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost ironPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="goldPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/gold.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level goldPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Gold Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost goldPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="emeraldPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/emerald.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level emeraldPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Emerald Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost emeraldPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="rubyPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/ruby.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level rubyPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Ruby Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost rubyPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="saphirPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/saphir.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level saphirPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Saphir Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost saphirPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="diamondPickaxe body__clicker_container_cta">
+            <div class="body__clicker_container_cta_container">
+                <img src="assets/img/diamond.png" alt="" class="body__clicker_container_cta_container_pickaxe">
+                <p class="body__clicker_container_cta_container_level diamondPickaxeLevel">0</p>
+                <div class="body__clicker_container_cta_container_bloc">
+                    <h2 class="body__clicker_container_cta_container_bloc_title">Diamond Pickaxe</h2>
+                    <p class="body__clicker_container_cta_container_bloc_cost diamondPickaxeCost">10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="assets/javascript/script.js" onload></script>
+</body>
 </html>
+
